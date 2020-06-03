@@ -10,7 +10,7 @@ class RatingStarts extends StatelessWidget {
   Widget build(BuildContext context) {
     String stars = '';
     for(int i = 0; i < rating ;i++){
-      stars += '★  ';
+      stars += '★ ';
     }
     stars.trim();
     return Text(stars, style: TextStyle(color: Colors.yellow, fontSize: 18.0),);

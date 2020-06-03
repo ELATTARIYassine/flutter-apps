@@ -35,19 +35,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 image: AssetImage(restaurant.imageUrl),
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(12.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(restaurant.name, style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis,),
-                  RatingStarts(restaurant.rating),
-                  SizedBox(height: 4.0,),
-                  Text(restaurant.address, style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600), overflow: TextOverflow.ellipsis,),
-                  SizedBox(height: 4.0,),
-                  Text('0.2 miles away', style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600), overflow: TextOverflow.ellipsis,)
-                ],
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.all(12.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(restaurant.name, style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis,),
+                    RatingStarts(restaurant.rating),
+                    SizedBox(height: 4.0,),
+                    Text(restaurant.address, style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600), overflow: TextOverflow.ellipsis,),
+                    SizedBox(height: 4.0,),
+                    Text('0.2 miles away', style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600), overflow: TextOverflow.ellipsis,)
+                  ],
+                ),
               ),
             ),
           ],
